@@ -1,0 +1,20 @@
+# Environnement / artefacts
+.env
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Données volumineuses et sensibles
+data/raw/images/
+data/raw/bag/
+data/interim/crops/
+data/processed/
+
+# Modèles entraînés (poids lourds) - garder le model card
+models/*.pt
+models/*.onnx
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store

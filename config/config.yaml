@@ -1,0 +1,35 @@
+# Global project configuration
+project:
+  name: uav-address-verification
+  country: Netherlands
+  area: "Delft city centre"
+  bbox: [4.353, 52.006, 4.363, 52.014]   # xmin, ymin, xmax, ymax
+  delivery_date: 2026-10-05
+
+data:
+  ref_source: "PDOK OGC API v2 (BAG)"
+  imagery_primary: "Mapillary Graph API v4"
+  imagery_secondary: "KartaView"
+  imagery_tertiary: "team-captured (Algeria)"
+
+detection:
+  model: "ultralytics"
+  variant: "yolo11n"          # nano for speed; possible: yolo11s
+  classes: ["house_number_plate"]
+  conf_threshold: 0.5
+  iou_threshold: 0.45
+  imgsz: 640
+  epochs: 50
+  batch: 16
+
+recognition:
+  engine: "paddleocr"
+  lang: "en"
+  use_angle_cls: false
+  valid_pattern: "^\\d{1,5}$"   # keep only digits
+
+outputs:
+  results_geojson: "data/processed/results.geojson"
+  map_html: "reports/figures/compliance_map.html"
+  detections_csv: "data/processed/detections.csv"
+  metrics_csv: "reports/tables/metrics.csv"
