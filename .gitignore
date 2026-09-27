@@ -1,8 +1,13 @@
 # Environnement / artefacts
 .env
+.venv/
 __pycache__/
 *.pyc
+*.pyo
 *.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
 
 # Données volumineuses et sensibles
 data/raw/images/

@@ -3,7 +3,7 @@ project:
   name: uav-address-verification
   country: Netherlands
   area: "Delft city centre"
-  bbox: [4.353, 52.006, 4.363, 52.014]   # xmin, ymin, xmax, ymax
+  bbox: [4.353, 52.006, 4.363, 52.014] # xmin, ymin, xmax, ymax
   delivery_date: 2026-10-05
 
 data:
@@ -13,8 +13,8 @@ data:
   imagery_tertiary: "team-captured (Algeria)"
 
 detection:
-  model: "ultralytics"
-  variant: "yolo11n"          # nano for speed; possible: yolo11s
+  model: "models/best.pt"
+  variant: "yolo8n" # nano for speed; possible: yolo8s
   classes: ["house_number_plate"]
   conf_threshold: 0.5
   iou_threshold: 0.45
@@ -23,10 +23,10 @@ detection:
   batch: 16
 
 recognition:
-  engine: "paddleocr"
+  engine: "easyocr"
   lang: "en"
   use_angle_cls: false
-  valid_pattern: "^\\d{1,5}$"   # keep only digits
+  valid_pattern: "^\\d{1,5}$" # keep only digits
 
 outputs:
   results_geojson: "data/processed/results.geojson"
