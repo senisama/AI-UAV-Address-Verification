@@ -8,9 +8,8 @@ project:
 
 data:
   ref_source: "PDOK OGC API v2 (BAG)"
-  imagery_primary: "Mapillary Graph API v4"
-  imagery_secondary: "KartaView"
-  imagery_tertiary: "team-captured (Algeria)"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
 
 detection:
   model: "models/best.pt"

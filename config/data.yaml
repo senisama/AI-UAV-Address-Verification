@@ -1,8 +1,8 @@
-# YOLO dataset - train/val/test structure (splits: 70/20/10)
-path: ../data  # dataset root
-train: labels/train/images
-val: labels/val/images
-test: labels/test/images
+# YOLO dataset - simplified raw layout inside data/raw
+path: ../data # dataset root
+train: raw/images
+val: raw/images
+test: raw/images
 
 names:
   0: house_number_plate
