@@ -10,13 +10,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Données volumineuses et sensibles
-data/raw/images/
-data/raw/bag/
-data/interim/crops/
-data/processed/
+
 
 # Modèles entraînés (poids lourds) - garder le model card
-models/*.pt
+
 models/*.onnx
 
 # IDE / OS
